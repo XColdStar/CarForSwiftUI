@@ -9,8 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+            VStack {
+                TCSearchBarView()
+            }
+            
+            
+//            NavigationLink (
+//                destination: Text("Destination"),
+//                label: {
+//                    Text("Hello, world!")
+//                        .foregroundColor(.blue)
+//                        .padding()
+//                }
+//            )
+            .navigationBarTitle(Text("汽车报价大全"), displayMode: .inline)
+//            .navigationBarHidden(true)
+        }
     }
 }
 
@@ -19,3 +35,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

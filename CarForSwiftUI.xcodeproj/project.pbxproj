@@ -3,16 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		318F65952E5CA9A1C7394D44 /* Pods_CarForSwiftUI_CarForSwiftUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57088A5ACB27EBD3C7E4E842 /* Pods_CarForSwiftUI_CarForSwiftUIUITests.framework */; };
 		713BC70725904C4F00A4E5C5 /* CarForSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC70625904C4F00A4E5C5 /* CarForSwiftUIApp.swift */; };
 		713BC70925904C4F00A4E5C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC70825904C4F00A4E5C5 /* ContentView.swift */; };
 		713BC70B25904C5200A4E5C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713BC70A25904C5200A4E5C5 /* Assets.xcassets */; };
 		713BC70E25904C5200A4E5C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713BC70D25904C5200A4E5C5 /* Preview Assets.xcassets */; };
 		713BC71925904C5200A4E5C5 /* CarForSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC71825904C5200A4E5C5 /* CarForSwiftUITests.swift */; };
 		713BC72425904C5200A4E5C5 /* CarForSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC72325904C5200A4E5C5 /* CarForSwiftUIUITests.swift */; };
+		713BC7D6259077E100A4E5C5 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC7D5259077E100A4E5C5 /* Color+Extension.swift */; };
+		713BC7DB2590798500A4E5C5 /* MacroDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC7DA2590798500A4E5C5 /* MacroDefine.swift */; };
+		713BC7E2259092F500A4E5C5 /* TCSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC7E1259092F500A4E5C5 /* TCSearchBarView.swift */; };
+		713BC7EA2590975A00A4E5C5 /* TCHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC7E92590975A00A4E5C5 /* TCHomePage.swift */; };
+		713BC7F8259098DF00A4E5C5 /* TCHomePageTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC7F7259098DF00A4E5C5 /* TCHomePageTopView.swift */; };
+		713BC8102591DAE300A4E5C5 /* TCLookedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC80F2591DAE200A4E5C5 /* TCLookedView.swift */; };
+		713BC8152591EA2C00A4E5C5 /* TCCarTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC8142591EA2C00A4E5C5 /* TCCarTypeView.swift */; };
+		713BC81A2591F87600A4E5C5 /* TCCarBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC8192591F87600A4E5C5 /* TCCarBrandView.swift */; };
+		713BC8242592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC8232592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift */; };
+		713BC82C2592E10200A4E5C5 /* TCCarTypeRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC82B2592E10200A4E5C5 /* TCCarTypeRecommendView.swift */; };
+		713BC8312592E86400A4E5C5 /* TCCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC8302592E86400A4E5C5 /* TCCarCell.swift */; };
+		8E95E098143F2DD38CBEF322 /* Pods_CarForSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6990F58C8C421A9BF7C7634D /* Pods_CarForSwiftUI.framework */; };
+		E3EDD6CDCFD4E3F9DEC4A8AF /* Pods_CarForSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE80CB04A5CCF286018A296 /* Pods_CarForSwiftUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020DBFC93B315F1702CAB684 /* Pods-CarForSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarForSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarForSwiftUITests/Pods-CarForSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		57088A5ACB27EBD3C7E4E842 /* Pods_CarForSwiftUI_CarForSwiftUIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarForSwiftUI_CarForSwiftUIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6990F58C8C421A9BF7C7634D /* Pods_CarForSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarForSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		713BC70325904C4F00A4E5C5 /* CarForSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarForSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		713BC70625904C4F00A4E5C5 /* CarForSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarForSwiftUIApp.swift; sourceTree = "<group>"; };
 		713BC70825904C4F00A4E5C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +62,23 @@
 		713BC71F25904C5200A4E5C5 /* CarForSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarForSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		713BC72325904C5200A4E5C5 /* CarForSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarForSwiftUIUITests.swift; sourceTree = "<group>"; };
 		713BC72525904C5200A4E5C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		713BC7D5259077E100A4E5C5 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		713BC7DA2590798500A4E5C5 /* MacroDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDefine.swift; sourceTree = "<group>"; };
+		713BC7E1259092F500A4E5C5 /* TCSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSearchBarView.swift; sourceTree = "<group>"; };
+		713BC7E92590975A00A4E5C5 /* TCHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCHomePage.swift; sourceTree = "<group>"; };
+		713BC7F7259098DF00A4E5C5 /* TCHomePageTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCHomePageTopView.swift; sourceTree = "<group>"; };
+		713BC80F2591DAE200A4E5C5 /* TCLookedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCLookedView.swift; sourceTree = "<group>"; };
+		713BC8142591EA2C00A4E5C5 /* TCCarTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarTypeView.swift; sourceTree = "<group>"; };
+		713BC8192591F87600A4E5C5 /* TCCarBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarBrandView.swift; sourceTree = "<group>"; };
+		713BC8232592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarTypeRecommendSingleView.swift; sourceTree = "<group>"; };
+		713BC82B2592E10200A4E5C5 /* TCCarTypeRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarTypeRecommendView.swift; sourceTree = "<group>"; };
+		713BC8302592E86400A4E5C5 /* TCCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarCell.swift; sourceTree = "<group>"; };
+		72B24C3363FC1DCF0FCF1F8B /* Pods-CarForSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarForSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-CarForSwiftUITests/Pods-CarForSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		896987584875EFD98ADC5EED /* Pods-CarForSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarForSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-CarForSwiftUI/Pods-CarForSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		8EE80CB04A5CCF286018A296 /* Pods_CarForSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarForSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C015C281F1020F28E919AEC4 /* Pods-CarForSwiftUI-CarForSwiftUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarForSwiftUI-CarForSwiftUIUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarForSwiftUI-CarForSwiftUIUITests/Pods-CarForSwiftUI-CarForSwiftUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC401088A8052FC1D34BCE47 /* Pods-CarForSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarForSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-CarForSwiftUI/Pods-CarForSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		DAF702486D9759FD26CA46B9 /* Pods-CarForSwiftUI-CarForSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarForSwiftUI-CarForSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-CarForSwiftUI-CarForSwiftUIUITests/Pods-CarForSwiftUI-CarForSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E95E098143F2DD38CBEF322 /* Pods_CarForSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3EDD6CDCFD4E3F9DEC4A8AF /* Pods_CarForSwiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +102,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318F65952E5CA9A1C7394D44 /* Pods_CarForSwiftUI_CarForSwiftUIUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14B4308FE7C27AF36A1AC88C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6990F58C8C421A9BF7C7634D /* Pods_CarForSwiftUI.framework */,
+				57088A5ACB27EBD3C7E4E842 /* Pods_CarForSwiftUI_CarForSwiftUIUITests.framework */,
+				8EE80CB04A5CCF286018A296 /* Pods_CarForSwiftUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		449ED4188F2ED52002C05D49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				896987584875EFD98ADC5EED /* Pods-CarForSwiftUI.debug.xcconfig */,
+				CC401088A8052FC1D34BCE47 /* Pods-CarForSwiftUI.release.xcconfig */,
+				C015C281F1020F28E919AEC4 /* Pods-CarForSwiftUI-CarForSwiftUIUITests.debug.xcconfig */,
+				DAF702486D9759FD26CA46B9 /* Pods-CarForSwiftUI-CarForSwiftUIUITests.release.xcconfig */,
+				020DBFC93B315F1702CAB684 /* Pods-CarForSwiftUITests.debug.xcconfig */,
+				72B24C3363FC1DCF0FCF1F8B /* Pods-CarForSwiftUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		713BC6FA25904C4F00A4E5C5 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +139,8 @@
 				713BC71725904C5200A4E5C5 /* CarForSwiftUITests */,
 				713BC72225904C5200A4E5C5 /* CarForSwiftUIUITests */,
 				713BC70425904C4F00A4E5C5 /* Products */,
+				449ED4188F2ED52002C05D49 /* Pods */,
+				14B4308FE7C27AF36A1AC88C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +157,10 @@
 		713BC70525904C4F00A4E5C5 /* CarForSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				713BC7E0259092B900A4E5C5 /* UsedCar */,
+				713BC7D4259077CD00A4E5C5 /* Common */,
 				713BC70625904C4F00A4E5C5 /* CarForSwiftUIApp.swift */,
+				713BC7E92590975A00A4E5C5 /* TCHomePage.swift */,
 				713BC70825904C4F00A4E5C5 /* ContentView.swift */,
 				713BC70A25904C5200A4E5C5 /* Assets.xcassets */,
 				713BC70F25904C5200A4E5C5 /* Info.plist */,
@@ -130,6 +195,30 @@
 			path = CarForSwiftUIUITests;
 			sourceTree = "<group>";
 		};
+		713BC7D4259077CD00A4E5C5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				713BC7D5259077E100A4E5C5 /* Color+Extension.swift */,
+				713BC7DA2590798500A4E5C5 /* MacroDefine.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		713BC7E0259092B900A4E5C5 /* UsedCar */ = {
+			isa = PBXGroup;
+			children = (
+				713BC7E1259092F500A4E5C5 /* TCSearchBarView.swift */,
+				713BC7F7259098DF00A4E5C5 /* TCHomePageTopView.swift */,
+				713BC80F2591DAE200A4E5C5 /* TCLookedView.swift */,
+				713BC8142591EA2C00A4E5C5 /* TCCarTypeView.swift */,
+				713BC8192591F87600A4E5C5 /* TCCarBrandView.swift */,
+				713BC8232592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift */,
+				713BC82B2592E10200A4E5C5 /* TCCarTypeRecommendView.swift */,
+				713BC8302592E86400A4E5C5 /* TCCarCell.swift */,
+			);
+			path = UsedCar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 713BC72825904C5200A4E5C5 /* Build configuration list for PBXNativeTarget "CarForSwiftUI" */;
 			buildPhases = (
+				C95D80DD37AC39C3180712B2 /* [CP] Check Pods Manifest.lock */,
 				713BC6FF25904C4F00A4E5C5 /* Sources */,
 				713BC70025904C4F00A4E5C5 /* Frameworks */,
 				713BC70125904C4F00A4E5C5 /* Resources */,
+				5845AC81184A0C35ACDEFE49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 713BC72B25904C5200A4E5C5 /* Build configuration list for PBXNativeTarget "CarForSwiftUITests" */;
 			buildPhases = (
+				5F1FEE86FD5F7FF75C78A444 /* [CP] Check Pods Manifest.lock */,
 				713BC71025904C5200A4E5C5 /* Sources */,
 				713BC71125904C5200A4E5C5 /* Frameworks */,
 				713BC71225904C5200A4E5C5 /* Resources */,
@@ -172,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 713BC72E25904C5200A4E5C5 /* Build configuration list for PBXNativeTarget "CarForSwiftUIUITests" */;
 			buildPhases = (
+				35AEAC1908EA8B3D1C2657C0 /* [CP] Check Pods Manifest.lock */,
 				713BC71B25904C5200A4E5C5 /* Sources */,
 				713BC71C25904C5200A4E5C5 /* Frameworks */,
 				713BC71D25904C5200A4E5C5 /* Resources */,
+				F42BEF0AB62A242980160897 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,13 +348,127 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35AEAC1908EA8B3D1C2657C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarForSwiftUI-CarForSwiftUIUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5845AC81184A0C35ACDEFE49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarForSwiftUI/Pods-CarForSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarForSwiftUI/Pods-CarForSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarForSwiftUI/Pods-CarForSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F1FEE86FD5F7FF75C78A444 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarForSwiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C95D80DD37AC39C3180712B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarForSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42BEF0AB62A242980160897 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarForSwiftUI-CarForSwiftUIUITests/Pods-CarForSwiftUI-CarForSwiftUIUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarForSwiftUI-CarForSwiftUIUITests/Pods-CarForSwiftUI-CarForSwiftUIUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarForSwiftUI-CarForSwiftUIUITests/Pods-CarForSwiftUI-CarForSwiftUIUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		713BC6FF25904C4F00A4E5C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				713BC70925904C4F00A4E5C5 /* ContentView.swift in Sources */,
+				713BC8312592E86400A4E5C5 /* TCCarCell.swift in Sources */,
+				713BC8152591EA2C00A4E5C5 /* TCCarTypeView.swift in Sources */,
+				713BC81A2591F87600A4E5C5 /* TCCarBrandView.swift in Sources */,
+				713BC7F8259098DF00A4E5C5 /* TCHomePageTopView.swift in Sources */,
+				713BC7DB2590798500A4E5C5 /* MacroDefine.swift in Sources */,
+				713BC7D6259077E100A4E5C5 /* Color+Extension.swift in Sources */,
+				713BC7EA2590975A00A4E5C5 /* TCHomePage.swift in Sources */,
+				713BC82C2592E10200A4E5C5 /* TCCarTypeRecommendView.swift in Sources */,
+				713BC8242592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift in Sources */,
+				713BC8102591DAE300A4E5C5 /* TCLookedView.swift in Sources */,
 				713BC70725904C4F00A4E5C5 /* CarForSwiftUIApp.swift in Sources */,
+				713BC7E2259092F500A4E5C5 /* TCSearchBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -402,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -414,11 +622,13 @@
 		};
 		713BC72925904C5200A4E5C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 896987584875EFD98ADC5EED /* Pods-CarForSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CarForSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 6UZ776X4GF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CarForSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -435,11 +645,13 @@
 		};
 		713BC72A25904C5200A4E5C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC401088A8052FC1D34BCE47 /* Pods-CarForSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CarForSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 6UZ776X4GF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CarForSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -456,6 +668,7 @@
 		};
 		713BC72C25904C5200A4E5C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 020DBFC93B315F1702CAB684 /* Pods-CarForSwiftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,6 +690,7 @@
 		};
 		713BC72D25904C5200A4E5C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B24C3363FC1DCF0FCF1F8B /* Pods-CarForSwiftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +712,7 @@
 		};
 		713BC72F25904C5200A4E5C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C015C281F1020F28E919AEC4 /* Pods-CarForSwiftUI-CarForSwiftUIUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -517,6 +732,7 @@
 		};
 		713BC73025904C5200A4E5C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAF702486D9759FD26CA46B9 /* Pods-CarForSwiftUI-CarForSwiftUIUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

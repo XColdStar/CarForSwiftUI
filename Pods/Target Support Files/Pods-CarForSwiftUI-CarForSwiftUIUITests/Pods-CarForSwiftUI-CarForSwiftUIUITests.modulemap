@@ -1,0 +1,6 @@
+framework module Pods_CarForSwiftUI_CarForSwiftUIUITests {
+  umbrella header "Pods-CarForSwiftUI-CarForSwiftUIUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
