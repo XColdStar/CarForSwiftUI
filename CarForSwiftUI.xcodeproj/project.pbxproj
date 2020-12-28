@@ -25,6 +25,12 @@
 		713BC8242592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC8232592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift */; };
 		713BC82C2592E10200A4E5C5 /* TCCarTypeRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC82B2592E10200A4E5C5 /* TCCarTypeRecommendView.swift */; };
 		713BC8312592E86400A4E5C5 /* TCCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC8302592E86400A4E5C5 /* TCCarCell.swift */; };
+		71B222672595DB5900971459 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B222662595DB5900971459 /* NetworkImage.swift */; };
+		71BE427B25943CB10010D24B /* TCReqest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE427A25943CB10010D24B /* TCReqest.swift */; };
+		71BE42A3259481DA0010D24B /* TCHomePageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE42A2259481DA0010D24B /* TCHomePageRequest.swift */; };
+		71BE42AB25949C6A0010D24B /* TCHomePageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE42AA25949C6A0010D24B /* TCHomePageModels.swift */; };
+		71BE42B02594A6CE0010D24B /* TCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE42AF2594A6CE0010D24B /* TCBaseModel.swift */; };
+		71BE42B92595B33F0010D24B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE42B82595B33F0010D24B /* ImageView.swift */; };
 		8E95E098143F2DD38CBEF322 /* Pods_CarForSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6990F58C8C421A9BF7C7634D /* Pods_CarForSwiftUI.framework */; };
 		E3EDD6CDCFD4E3F9DEC4A8AF /* Pods_CarForSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE80CB04A5CCF286018A296 /* Pods_CarForSwiftUITests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +79,12 @@
 		713BC8232592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarTypeRecommendSingleView.swift; sourceTree = "<group>"; };
 		713BC82B2592E10200A4E5C5 /* TCCarTypeRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarTypeRecommendView.swift; sourceTree = "<group>"; };
 		713BC8302592E86400A4E5C5 /* TCCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarCell.swift; sourceTree = "<group>"; };
+		71B222662595DB5900971459 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
+		71BE427A25943CB10010D24B /* TCReqest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCReqest.swift; sourceTree = "<group>"; };
+		71BE42A2259481DA0010D24B /* TCHomePageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCHomePageRequest.swift; sourceTree = "<group>"; };
+		71BE42AA25949C6A0010D24B /* TCHomePageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCHomePageModels.swift; sourceTree = "<group>"; };
+		71BE42AF2594A6CE0010D24B /* TCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBaseModel.swift; sourceTree = "<group>"; };
+		71BE42B82595B33F0010D24B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		72B24C3363FC1DCF0FCF1F8B /* Pods-CarForSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarForSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-CarForSwiftUITests/Pods-CarForSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		896987584875EFD98ADC5EED /* Pods-CarForSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarForSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-CarForSwiftUI/Pods-CarForSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		8EE80CB04A5CCF286018A296 /* Pods_CarForSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarForSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,13 +210,50 @@
 		713BC7D4259077CD00A4E5C5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				713BC7D5259077E100A4E5C5 /* Color+Extension.swift */,
+				71BE42B425959BAB0010D24B /* Views */,
+				71BE428225943DBA0010D24B /* Extension */,
+				71BE427925943C6A0010D24B /* Request */,
 				713BC7DA2590798500A4E5C5 /* MacroDefine.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
 		713BC7E0259092B900A4E5C5 /* UsedCar */ = {
+			isa = PBXGroup;
+			children = (
+				71BE42A1259481AD0010D24B /* Request */,
+				71BE4297259472B40010D24B /* View */,
+				71BE4296259472A80010D24B /* Models */,
+			);
+			path = UsedCar;
+			sourceTree = "<group>";
+		};
+		71BE427925943C6A0010D24B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				71BE427A25943CB10010D24B /* TCReqest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		71BE428225943DBA0010D24B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				713BC7D5259077E100A4E5C5 /* Color+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		71BE4296259472A80010D24B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71BE42AA25949C6A0010D24B /* TCHomePageModels.swift */,
+				71BE42AF2594A6CE0010D24B /* TCBaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		71BE4297259472B40010D24B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				713BC7E1259092F500A4E5C5 /* TCSearchBarView.swift */,
@@ -216,7 +265,24 @@
 				713BC82B2592E10200A4E5C5 /* TCCarTypeRecommendView.swift */,
 				713BC8302592E86400A4E5C5 /* TCCarCell.swift */,
 			);
-			path = UsedCar;
+			path = View;
+			sourceTree = "<group>";
+		};
+		71BE42A1259481AD0010D24B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				71BE42A2259481DA0010D24B /* TCHomePageRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		71BE42B425959BAB0010D24B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71BE42B82595B33F0010D24B /* ImageView.swift */,
+				71B222662595DB5900971459 /* NetworkImage.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,17 +523,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				713BC70925904C4F00A4E5C5 /* ContentView.swift in Sources */,
+				71BE42B02594A6CE0010D24B /* TCBaseModel.swift in Sources */,
 				713BC8312592E86400A4E5C5 /* TCCarCell.swift in Sources */,
+				71BE42AB25949C6A0010D24B /* TCHomePageModels.swift in Sources */,
 				713BC8152591EA2C00A4E5C5 /* TCCarTypeView.swift in Sources */,
 				713BC81A2591F87600A4E5C5 /* TCCarBrandView.swift in Sources */,
 				713BC7F8259098DF00A4E5C5 /* TCHomePageTopView.swift in Sources */,
 				713BC7DB2590798500A4E5C5 /* MacroDefine.swift in Sources */,
+				71BE427B25943CB10010D24B /* TCReqest.swift in Sources */,
 				713BC7D6259077E100A4E5C5 /* Color+Extension.swift in Sources */,
 				713BC7EA2590975A00A4E5C5 /* TCHomePage.swift in Sources */,
 				713BC82C2592E10200A4E5C5 /* TCCarTypeRecommendView.swift in Sources */,
 				713BC8242592E0C300A4E5C5 /* TCCarTypeRecommendSingleView.swift in Sources */,
+				71BE42A3259481DA0010D24B /* TCHomePageRequest.swift in Sources */,
 				713BC8102591DAE300A4E5C5 /* TCLookedView.swift in Sources */,
+				71B222672595DB5900971459 /* NetworkImage.swift in Sources */,
 				713BC70725904C4F00A4E5C5 /* CarForSwiftUIApp.swift in Sources */,
+				71BE42B92595B33F0010D24B /* ImageView.swift in Sources */,
 				713BC7E2259092F500A4E5C5 /* TCSearchBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

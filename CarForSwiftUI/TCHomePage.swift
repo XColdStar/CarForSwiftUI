@@ -14,6 +14,15 @@ struct TCHomePage: View {
         UITableView.appearance().backgroundColor = UIColor.clear
         UITableViewCell.appearance().selectionStyle = .none
     }
+
+    //糖豆
+    @State private var topDatas = [TCHomePageListChildren]()
+    //车型
+    @State private var carTypeDatas = [TCHomePageListChildren]()
+    //品牌
+    @State private var carBrandDatas = [TCHomePageListChildren]()
+    //车型推荐
+    @State private var carTypeRecommendDatas = [TCHomePageListChildren]()
     
     var body: some View {
         if #available(iOS 14.0, *)  {
@@ -33,7 +42,7 @@ struct TCHomePage: View {
                     
                     VStack {
                         VStack {
-                            TCHomePageTopView()//糖豆
+                            TCHomePageTopView(datas: $topDatas)//糖豆
                             Spacer()
                                 .frame(height:10)
                             HStack {
@@ -124,10 +133,32 @@ struct TCHomePage: View {
             }
             .background(GrayColor_Back)
             .ignoresSafeArea(.all, edges: .bottom)
+            .onAppear (
+                perform: getConfigDatas
+            )
         } else {
             // Fallback on earlier versions
         }
     }
+    
+    func getConfigDatas() {
+        TCHomePageRequest.getConfigDatas {(isSuccess, array, error) in
+            if isSuccess {
+                if let datas = array {
+                    for (_, item) in datas.enumerated() {
+                        if item.typeId == "1" {
+                            self.topDatas = item.list ?? []
+                        }
+                    }
+                } else {
+                    print("空数据~")
+                }
+            } else {
+                print("请求失败~：\(String(describing: error))")
+            }
+        }
+    }
+    
 }
 
 struct TCHomePage_Previews: PreviewProvider {
