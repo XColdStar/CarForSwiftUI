@@ -35,9 +35,6 @@ struct TCHomePageTopView: View {
         LazyHGrid(rows: rows, alignment: .center) {
             ForEach(datas) {data in
                 VStack {
-                    Spacer()
-                        .frame(height:5)
-                    
 //                    Image(data.image!)
 //                        .resizable()
 //                        .frame(width:30, height:30)
@@ -45,9 +42,8 @@ struct TCHomePageTopView: View {
                     
                     NetworkImage(url: data.image!)
                     
-
                     Spacer()
-                        .frame(height:15)
+                        .frame(height:5)
                     
                     Text(data.title!)
                         .font(.system(size: 13, weight: .light))
@@ -58,13 +54,13 @@ struct TCHomePageTopView: View {
         .padding()
         .background(Color.white)
         .cornerRadius(10)
-        .frame(width: DeviceWidth-20,height: 100)
+        .frame(width: DeviceWidth-20,height: 88)
 //        .shadow(radius: 5)
     }
 }
 
 struct TCHomePageTopView_Previews: PreviewProvider {
-    @State static private var datas = [TCHomePageListChildren()]
+    @State static private var datas = [TCHomePageListChildren(data: nil, image: "", subTitle: "subtitle", title: "title")]
     static var previews: some View {
         TCHomePageTopView(datas: $datas)
     }

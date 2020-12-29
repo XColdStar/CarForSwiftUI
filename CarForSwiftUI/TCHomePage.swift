@@ -57,10 +57,10 @@ struct TCHomePage: View {
                         VStack {
                             Spacer()
                                 .frame(height:15)
-                            TCCarTypeView()//车型
+                            TCCarTypeView(datas: $carTypeDatas)//车型
                             Spacer()
                                 .frame(height:10)
-                            TCCarBrandView()//品牌
+                            TCCarBrandView(datas: $carBrandDatas)//品牌
                             Spacer()
                                 .frame(height:15)
                         }
@@ -71,7 +71,7 @@ struct TCHomePage: View {
                         
                         Spacer()
                             .frame(height:10)
-                        TCCarTypeRecommendView()//车型推荐
+                        TCCarTypeRecommendView(datas: $carTypeRecommendDatas)//车型推荐
                         Spacer()
                             .frame(height:10)
                         
@@ -146,8 +146,19 @@ struct TCHomePage: View {
             if isSuccess {
                 if let datas = array {
                     for (_, item) in datas.enumerated() {
-                        if item.typeId == "1" {
-                            self.topDatas = item.list ?? []
+                        switch item.typeId {
+                        case "1": self.topDatas = item.list ?? []
+                        case "2": self.carTypeDatas = item.list ?? []
+                        case "3": self.carTypeDatas += item.list ?? []
+                        case "4": do {
+                            self.carBrandDatas = item.list ?? []
+                            if carBrandDatas.count > 0 {
+                                let more = TCHomePageListChildren(data: "0", image: "ellipsis.circle.fill", subTitle: "", title: "更多")
+                                carBrandDatas.append(more)
+                            }
+                        }
+                        case "5":self.carTypeRecommendDatas = item.list ?? []
+                        default: break
                         }
                     }
                 } else {

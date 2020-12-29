@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct TCCarTypeView: View {
+    @Binding var datas: [TCHomePageListChildren]
     var body: some View {
         let columns: [GridItem] = Array(repeating: .init(.fixed((DeviceWidth-70)/4.0)), count: 4)
         LazyVGrid(columns: columns,spacing:10) {
-            ForEach(0..<8) { item in
-                Text("\(item + 1)-\(item + 2)万")
-                    .padding(.init(top: 5, leading: 20, bottom: 5, trailing: 20))
-                    .font(.system(size: 13, weight: .light))
+            ForEach(datas) { item in
+                Text(item.title ?? "")
+                    .lineLimit(1)
+                    .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
+                    .font(.system(size: 12, weight: .light))
+                    .frame(width:(DeviceWidth-70)/4.0)
                     .background (
                         RoundedRectangle(cornerRadius: 16, style: .continuous)
                             .fill(BlueColor_Back)
@@ -27,7 +30,8 @@ struct TCCarTypeView: View {
 }
 
 struct TCCarTypeView_Previews: PreviewProvider {
+    @State static private var datas = [TCHomePageListChildren(data: nil, image: "", subTitle: "subtitle", title: "title")]
     static var previews: some View {
-        TCCarTypeView()
+        TCCarTypeView(datas: $datas)
     }
 }

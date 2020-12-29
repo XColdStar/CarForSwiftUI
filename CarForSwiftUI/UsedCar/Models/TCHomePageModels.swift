@@ -12,6 +12,14 @@ class TCHomePageListChildren: TCBaseModel {
     var image : String?
     var subTitle : String?
     var title : String?
+    
+    convenience init(data: String?, image: String?, subTitle: String?, title: String?) {
+        self.init()
+        self.data = data
+        self.image = image
+        self.subTitle = subTitle
+        self.title = title
+    }
 }
 
 class TCHomePageList: TCBaseModel {

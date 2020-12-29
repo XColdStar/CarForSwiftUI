@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct TCCarTypeRecommendSingleView: View {
+    var model: TCHomePageListChildren
     var body: some View {
-        ZStack(alignment:.bottomTrailing) {
-            Image(systemName: "car")
-                .font(.system(size: 40, weight: .light))
-                .foregroundColor(.yellow)
-            
+        ZStack() {
+            NetworkImage(url: model.image ?? "",imageSize: CGSize(width:(DeviceWidth-40)/3.0,height: 88))
+                .frame(width:(DeviceWidth-40)/3.0,height: 88)
+                .aspectRatio(contentMode: .fit)
+                .scaledToFill()
+
             HStack {
                 Spacer()
                     .frame(width:10)
                 VStack(alignment: .leading) {
                     Spacer()
                         .frame(height:10)
-                    Text("城市代步")
+                    Text(model.title ?? "")
                         .font(.system(size: 12))
-                    Text("省时省力")
+                    Spacer()
+                        .frame(height: 2)
+                    Text(model.subTitle ?? "")
                         .font(.system(size: 10, weight: .light))
                     Spacer()
                 }
@@ -38,8 +42,8 @@ struct TCCarTypeRecommendSingleView: View {
     }
 }
 
-struct TCCarTypeRecommendSingleView_Previews: PreviewProvider {
-    static var previews: some View {
-        TCCarTypeRecommendSingleView()
-    }
-}
+//struct TCCarTypeRecommendSingleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TCCarTypeRecommendSingleView()
+//    }
+//}

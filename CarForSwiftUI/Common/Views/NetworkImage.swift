@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct NetworkImage: View {
-    
     var url: String
-    
+    var imageSize = CGSize(width: 35, height: 35)
     @State private var image: UIImage?
-    
     var body: some View {
 //        Image(uiImage: image ?? UIImage(systemName: "star")!)
 //            .resizable()
@@ -26,7 +24,7 @@ struct NetworkImage: View {
             if let img = image {
                 Image(uiImage: img)
                     .resizable()
-                    .frame(width:40,height: 40)
+                    .frame(width:imageSize.width,height: imageSize.height)
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
             } else {

@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct TCCarTypeRecommendView: View {
+    @Binding var datas: [TCHomePageListChildren]
     var body: some View {
         HStack {
-            ForEach(0..<3) { index in
-                if index > 0 {
-                    Spacer()
-                        .frame(width:10)
-                }
-                TCCarTypeRecommendSingleView()
+            ForEach(datas) { item in
+                TCCarTypeRecommendSingleView(model: item)
             }
         }
-//        .background(Color.blue)
     }
 }
 
-struct TCCarTypeRecommendView_Previews: PreviewProvider {
-    static var previews: some View {
-        TCCarTypeRecommendView()
-//            .previewLayout(.fixed(width: DeviceWidth, height: 108))
-    }
-}
+//struct TCCarTypeRecommendView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TCCarTypeRecommendView()
+////            .previewLayout(.fixed(width: DeviceWidth, height: 108))
+//    }
+//}
