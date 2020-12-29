@@ -8,15 +8,15 @@ target 'CarForSwiftUI' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'HandyJSON'
-  pod 'SnapKit'
-  pod 'IQKeyboardManagerSwift'
   pod 'Kingfisher'
-  pod 'MJRefresh'
-  pod 'MBProgressHUD'
-  pod 'ReactiveObjC'
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxBlocking'
+#  pod 'SnapKit'
+#  pod 'IQKeyboardManagerSwift'
+#  pod 'MJRefresh'
+#  pod 'MBProgressHUD'
+#  pod 'ReactiveObjC'
+#  pod 'RxSwift'
+#  pod 'RxCocoa'
+#  pod 'RxBlocking'
 
   target 'CarForSwiftUITests' do
     inherit! :search_paths
