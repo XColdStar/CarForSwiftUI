@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TCCarTypeView: View {
     @Binding var datas: [TCHomePageListChildren]
+    @EnvironmentObject var lookedManager: TCLookedManager
     var body: some View {
         let columns: [GridItem] = Array(repeating: .init(.fixed((DeviceWidth-70)/4.0)), count: 4)
         LazyVGrid(columns: columns,spacing:10) {
@@ -22,6 +23,9 @@ struct TCCarTypeView: View {
                         RoundedRectangle(cornerRadius: 16, style: .continuous)
                             .fill(BlueColor_Back)
                     )
+                    .onTapGesture {
+                        lookedManager.save(model: TCHomeLookedModel(item: item))
+                    }
             }
         }
 //        .background(Color.blue)

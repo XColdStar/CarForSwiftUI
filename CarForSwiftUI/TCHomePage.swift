@@ -24,6 +24,9 @@ struct TCHomePage: View {
     //车型推荐
     @State private var carTypeRecommendDatas = [TCHomePageListChildren]()
     
+    //最近看过数据源
+    @EnvironmentObject var lookedManager: TCLookedManager
+    
     var body: some View {
         if #available(iOS 14.0, *)  {
             VStack(alignment:.center) {
@@ -43,12 +46,16 @@ struct TCHomePage: View {
                     VStack {
                         VStack {
                             TCHomePageTopView(datas: $topDatas)//糖豆
-                            Spacer()
-                                .frame(height:10)
-                            HStack {
-                                Spacer()
-                                    .frame(width:5)
-                                TCLookedView()//最近看过
+                            Group {
+                                if lookedManager.lookedModels.count > 0 {
+                                    Spacer()
+                                        .frame(height:10)
+                                    HStack {
+                                        Spacer()
+                                            .frame(width:5)
+                                        TCLookedView()//最近看过
+                                    }
+                                }
                             }
                             Spacer()
                                 .frame(height:10)

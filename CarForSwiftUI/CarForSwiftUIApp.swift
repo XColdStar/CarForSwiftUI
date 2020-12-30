@@ -19,7 +19,7 @@ struct CarForSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             TabView(selection:$selectedIndex) {
-                TCHomePage()
+                TCHomePage().environmentObject(TCLookedManager())
                     .tabItem {
                         Image(systemName: selectedIndex == 0 ? "car.2" : "car")
                         Text("二手车")

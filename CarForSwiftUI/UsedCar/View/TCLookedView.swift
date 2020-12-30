@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TCLookedView: View {
+    
+    @EnvironmentObject var lookedManager: TCLookedManager
+    
     var body: some View {
         ZStack(alignment: .trailing) {
             HStack {
@@ -15,8 +18,8 @@ struct TCLookedView: View {
                     .font(.subheadline)
                 ScrollView(.horizontal,showsIndicators: false) {
                     HStack {
-                        ForEach(0..<10) { item in
-                            Text("\(item + 1)-\(item+2)万")
+                        ForEach(lookedManager.lookedModels) { item in
+                            Text(item.title ?? "")
                                 .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
                                 .font(.system(size: 13, weight: .light))
                                 .background(

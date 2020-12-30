@@ -8,7 +8,7 @@
 import SwiftUI
 import HandyJSON
 
-class TCBaseModel: Identifiable, HandyJSON, ObservableObject, Equatable {
+class TCBaseModel: Identifiable, HandyJSON, Equatable {
     static func == (lhs: TCBaseModel, rhs: TCBaseModel) -> Bool {
         lhs.id == rhs.id
     }
