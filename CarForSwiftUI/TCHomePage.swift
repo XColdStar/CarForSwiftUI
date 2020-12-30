@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+class TCHomePageDatasModel: ObservableObject {
+    //糖豆
+    @Published var topDatas = [TCHomePageListChildren]()
+    //车型
+    @Published var carTypeDatas = [TCHomePageListChildren]()
+    //品牌
+    @Published var carBrandDatas = [TCHomePageListChildren]()
+    //车型推荐
+    @Published var carTypeRecommendDatas = [TCHomePageListChildren]()
+}
+
 struct TCHomePage: View {
     
     init() {
@@ -15,15 +26,9 @@ struct TCHomePage: View {
         UITableViewCell.appearance().selectionStyle = .none
     }
 
-    //糖豆
-    @State private var topDatas = [TCHomePageListChildren]()
-    //车型
-    @State private var carTypeDatas = [TCHomePageListChildren]()
-    //品牌
-    @State private var carBrandDatas = [TCHomePageListChildren]()
-    //车型推荐
-    @State private var carTypeRecommendDatas = [TCHomePageListChildren]()
-    
+    //存放首页所有数据模型
+    @ObservedObject var datas = TCHomePageDatasModel()
+
     //最近看过数据源
     @EnvironmentObject var lookedManager: TCLookedManager
     
@@ -45,7 +50,7 @@ struct TCHomePage: View {
                     
                     VStack {
                         VStack {
-                            TCHomePageTopView(datas: $topDatas)//糖豆
+                            TCHomePageTopView(datas: $datas.topDatas)//糖豆
                             Group {
                                 if lookedManager.lookedModels.count > 0 {
                                     Spacer()
@@ -64,10 +69,10 @@ struct TCHomePage: View {
                         VStack {
                             Spacer()
                                 .frame(height:15)
-                            TCCarTypeView(datas: $carTypeDatas)//车型
+                            TCCarTypeView(datas: $datas.carTypeDatas)//车型
                             Spacer()
                                 .frame(height:10)
-                            TCCarBrandView(datas: $carBrandDatas)//品牌
+                            TCCarBrandView(datas: $datas.carBrandDatas)//品牌
                             Spacer()
                                 .frame(height:15)
                         }
@@ -78,7 +83,7 @@ struct TCHomePage: View {
                         
                         Spacer()
                             .frame(height:10)
-                        TCCarTypeRecommendView(datas: $carTypeRecommendDatas)//车型推荐
+                        TCCarTypeRecommendView(datas: $datas.carTypeRecommendDatas)//车型推荐
                         Spacer()
                             .frame(height:10)
                         
@@ -154,17 +159,17 @@ struct TCHomePage: View {
                 if let datas = array {
                     for (_, item) in datas.enumerated() {
                         switch item.typeId {
-                        case "1": self.topDatas = item.list ?? []
-                        case "2": self.carTypeDatas = item.list ?? []
-                        case "3": self.carTypeDatas += item.list ?? []
+                        case "1": self.datas.topDatas = item.list ?? []
+                        case "2": self.datas.carTypeDatas = item.list ?? []
+                        case "3": self.datas.carTypeDatas += item.list ?? []
                         case "4": do {
-                            self.carBrandDatas = item.list ?? []
-                            if carBrandDatas.count > 0 {
+                            self.datas.carBrandDatas = item.list ?? []
+                            if self.datas.carBrandDatas.count > 0 {
                                 let more = TCHomePageListChildren(data: "0", image: "ellipsis.circle.fill", subTitle: "", title: "更多")
-                                carBrandDatas.append(more)
+                                self.datas.carBrandDatas.append(more)
                             }
                         }
-                        case "5":self.carTypeRecommendDatas = item.list ?? []
+                        case "5":self.datas.carTypeRecommendDatas = item.list ?? []
                         default: break
                         }
                     }

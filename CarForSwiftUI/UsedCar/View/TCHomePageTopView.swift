@@ -40,12 +40,12 @@ struct TCHomePageTopView: View {
 //                        .frame(width:30, height:30)
 //                        .foregroundColor(.yellow)
                     
-                    NetworkImage(url: data.image!)
+                    NetworkImage(url: data.image ?? "")
                     
                     Spacer()
                         .frame(height:5)
                     
-                    Text(data.title!)
+                    Text(data.title ?? "")
                         .font(.system(size: 13, weight: .light))
                 }
                 .frame(width:(DeviceWidth-80)/5.0)
@@ -59,9 +59,9 @@ struct TCHomePageTopView: View {
     }
 }
 
-struct TCHomePageTopView_Previews: PreviewProvider {
-    @State static private var datas = [TCHomePageListChildren(data: nil, image: "", subTitle: "subtitle", title: "title")]
-    static var previews: some View {
-        TCHomePageTopView(datas: $datas)
-    }
-}
+//struct TCHomePageTopView_Previews: PreviewProvider {
+//    @State static private var datas = [TCHomePageListChildren(data: nil, image: "", subTitle: "subtitle", title: "title")]
+//    static var previews: some View {
+//        TCHomePageTopView(datas: $datas)
+//    }
+//}
