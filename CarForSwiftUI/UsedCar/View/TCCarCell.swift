@@ -16,7 +16,7 @@ struct TCCarCell: View {
                     .frame(width: DeviceWidth/3.0,height: 90)
                     .foregroundColor(.yellow)
                     .background (
-                        RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        RoundedRectangle(cornerRadius: 8, style: .circular)
                             .fill(Color.white)
                     )
                 VStack(alignment:.leading) {
@@ -31,7 +31,7 @@ struct TCCarCell: View {
                         .foregroundColor(.blue)
                         .padding(.all,2)
                         .background(
-                            RoundedRectangle(cornerRadius:3, style: .continuous)
+                            RoundedRectangle(cornerRadius:3, style: .circular)
                                 .fill(BlueColor_Back)
                         )
                     Spacer()

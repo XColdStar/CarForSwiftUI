@@ -15,15 +15,15 @@ struct TCLookedView: View {
         ZStack(alignment: .trailing) {
             HStack {
                 Text("最近看过:")
-                    .font(.subheadline)
+                    .font(.system(size: 13))
                 ScrollView(.horizontal,showsIndicators: false) {
                     HStack {
                         ForEach(lookedManager.lookedModels) { item in
                             Text(item.title ?? "")
                                 .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
-                                .font(.system(size: 13, weight: .light))
+                                .font(.system(size: 12, weight: .light))
                                 .background(
-                                    RoundedRectangle(cornerRadius: 13, style: .continuous)
+                                    RoundedRectangle(cornerRadius: 13, style: .circular)
                                         .fill(Color.white)
                                 )
                         }
@@ -32,7 +32,7 @@ struct TCLookedView: View {
             }
             HStack {
                 RoundedRectangle(cornerRadius: 0)
-                    .fill(LinearGradient(gradient: Gradient(colors: [Color(hex: 0xFFFFFF, alpha: 0.3),Color(hex: 0xFFFFFF, alpha: 0.5),Color(hex: 0xF5F7FB, alpha: 0.8)]), startPoint: .leading, endPoint: .trailing))
+                    .fill(LinearGradient(gradient: Gradient(colors: [Color(hex: 0xFFFFFF, alpha: 0.5),Color(hex: 0xFFFFFF, alpha: 0.7),Color(hex: 0xF5F7FB, alpha: 0.9)]), startPoint: .leading, endPoint: .trailing))
                     .frame(width: 10, height: 25, alignment: .trailing)
             }
         }

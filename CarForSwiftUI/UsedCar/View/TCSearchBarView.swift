@@ -39,11 +39,11 @@ struct TCSearchBarView: View {
         }
         .frame(width:DeviceWidth-20, height: 36)
         .background(
-            RoundedRectangle(cornerRadius: 50, style: .continuous)
+            RoundedRectangle(cornerRadius: 50, style: .circular)
                 .fill(Color.white)
         )
         .overlay (
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
+            RoundedRectangle(cornerRadius: 18, style: .circular)
                 .strokeBorder(GrayColor, lineWidth: 0.5)
         )
 //        .background(Color.white)

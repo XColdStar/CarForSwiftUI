@@ -20,7 +20,7 @@ struct TCCarTypeView: View {
                     .font(.system(size: 12, weight: .light))
                     .frame(width:(DeviceWidth-70)/4.0)
                     .background (
-                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        RoundedRectangle(cornerRadius: 16, style: .circular)
                             .fill(BlueColor_Back)
                     )
                     .onTapGesture {
