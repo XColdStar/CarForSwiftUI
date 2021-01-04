@@ -8,41 +8,64 @@
 import SwiftUI
 
 struct TCCarCell: View {
+    
+    let model: TCSelectGoodCarModel
+    
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "car")
-                    .resizable()
-                    .frame(width: DeviceWidth/3.0,height: 90)
-                    .foregroundColor(.yellow)
-                    .background (
-                        RoundedRectangle(cornerRadius: 8, style: .circular)
-                            .fill(Color.white)
-                    )
+            Spacer()
+                .frame(height:10)
+            HStack(alignment: .top) {
+//                Image(systemName: "car")
+//                    .resizable()
+//                    .frame(width: DeviceWidth/3.0,height: 90)
+//                    .foregroundColor(.yellow)
+//                    .background (
+//                        RoundedRectangle(cornerRadius: 8, style: .circular)
+//                            .fill(Color.white)
+//                    )
+                
+                NetworkImage(url: model.image ?? "", imageSize: CGSize(width: DeviceWidth/3.0, height: 90), cornerRadius: 8)
+                    .frame(width: DeviceWidth/3.0, height: 90, alignment: .center)
+                
                 VStack(alignment:.leading) {
-                    Spacer()
-                        .frame(height:15)
-                    Text("奔驰C级 2020款 改款 C 260 L 运动款")
-                        .font(.headline)
+                    
+                    if let year = model.year {
+                        Text((model.serialName ?? "") + "\(year)款" + (model.carName ?? ""))
+                            .font(.headline)
+                    } else {
+                        Text((model.serialName ?? "") + (model.carName ?? ""))
+                            .font(.headline)
+                    }
+
+                    if (model.labels?.count)! > 0 {
+                        Spacer()
+                            .frame(height:5)
+                        Text(model.labels!)
+                            .font(.system(size: 12, weight: .light))
+                            .foregroundColor(.blue)
+                            .padding(.all,2)
+                            .background(
+                                RoundedRectangle(cornerRadius:3, style: .circular)
+                                    .fill(BlueColor_Back)
+                            )
+                    }
+                    
                     Spacer()
                         .frame(height:5)
-                    Text("准新车")
-                        .font(.system(size: 12, weight: .light))
-                        .foregroundColor(.blue)
-                        .padding(.all,2)
-                        .background(
-                            RoundedRectangle(cornerRadius:3, style: .circular)
-                                .fill(BlueColor_Back)
-                        )
+                    
+                    if let year = model.year {
+                        Text("\(year)年/\(String(format: "%.2f", model.mileage!/10000.0))万公里/\(model.cityName ?? "")")
+                            .font(.system(size: 12, weight: .light))
+                    }
+                    
                     Spacer()
                         .frame(height:5)
-                    Text("2020年/1.68万公里/北京")
-                        .font(.system(size: 13, weight: .light))
-                    Spacer()
-                        .frame(height:5)
-                    Text("88.88万")
+                    
+                    Text(model.displayPrice ?? "")
                         .font(.system(size: 15, weight: .medium))
                         .foregroundColor(.red)
+                    
                 }
                 Spacer()
             }
@@ -55,8 +78,8 @@ struct TCCarCell: View {
     }
 }
 
-struct TCCarCell_Previews: PreviewProvider {
-    static var previews: some View {
-        TCCarCell()
-    }
-}
+//struct TCCarCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TCCarCell()
+//    }
+//}

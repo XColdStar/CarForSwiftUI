@@ -9,14 +9,14 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class Model: Codable {
-    
-}
+let host = "https://bj.app.yiche.com/"
 
 struct TCReqest  {
     
     static func request(url: String, method: HTTPMethod, param: [String: Any]?, resultCallback: @escaping (Bool, JSON?, NSError?)->()) {
-        AF.request(url, method: method, parameters: param).responseJSON { response in
+        let requestUrl = host + url
+        print("requestUrl：\(requestUrl)")
+        AF.request(requestUrl, method: method, parameters: param).responseJSON { response in
             
             guard response.error == nil else {
                 let error = NSError(domain: response.error?.errorDescription ?? "请求失败！", code: response.error!.responseCode ?? 0, userInfo: nil)

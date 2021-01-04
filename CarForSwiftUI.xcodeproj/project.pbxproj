@@ -27,6 +27,7 @@
 		713BC8312592E86400A4E5C5 /* TCCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC8302592E86400A4E5C5 /* TCCarCell.swift */; };
 		716323FB259ACD7E00EB4918 /* TCHomeLookedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716323FA259ACD7E00EB4918 /* TCHomeLookedModel.swift */; };
 		71632403259ACE7C00EB4918 /* TCLookedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71632402259ACE7C00EB4918 /* TCLookedManager.swift */; };
+		71AF1F5025A2B697004AA464 /* TCSelectGoodCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF1F4F25A2B697004AA464 /* TCSelectGoodCarModel.swift */; };
 		71B222672595DB5900971459 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B222662595DB5900971459 /* NetworkImage.swift */; };
 		71BE427B25943CB10010D24B /* TCReqest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE427A25943CB10010D24B /* TCReqest.swift */; };
 		71BE42A3259481DA0010D24B /* TCHomePageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE42A2259481DA0010D24B /* TCHomePageRequest.swift */; };
@@ -83,6 +84,7 @@
 		713BC8302592E86400A4E5C5 /* TCCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCarCell.swift; sourceTree = "<group>"; };
 		716323FA259ACD7E00EB4918 /* TCHomeLookedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCHomeLookedModel.swift; sourceTree = "<group>"; };
 		71632402259ACE7C00EB4918 /* TCLookedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCLookedManager.swift; sourceTree = "<group>"; };
+		71AF1F4F25A2B697004AA464 /* TCSelectGoodCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSelectGoodCarModel.swift; sourceTree = "<group>"; };
 		71B222662595DB5900971459 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		71BE427A25943CB10010D24B /* TCReqest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCReqest.swift; sourceTree = "<group>"; };
 		71BE42A2259481DA0010D24B /* TCHomePageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCHomePageRequest.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				71BE42AA25949C6A0010D24B /* TCHomePageModels.swift */,
 				71BE42AF2594A6CE0010D24B /* TCBaseModel.swift */,
 				716323FA259ACD7E00EB4918 /* TCHomeLookedModel.swift */,
+				71AF1F4F25A2B697004AA464 /* TCSelectGoodCarModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				71BE42B02594A6CE0010D24B /* TCBaseModel.swift in Sources */,
 				713BC8312592E86400A4E5C5 /* TCCarCell.swift in Sources */,
 				71BE42AB25949C6A0010D24B /* TCHomePageModels.swift in Sources */,
+				71AF1F5025A2B697004AA464 /* TCSelectGoodCarModel.swift in Sources */,
 				713BC8152591EA2C00A4E5C5 /* TCCarTypeView.swift in Sources */,
 				713BC81A2591F87600A4E5C5 /* TCCarBrandView.swift in Sources */,
 				713BC7F8259098DF00A4E5C5 /* TCHomePageTopView.swift in Sources */,

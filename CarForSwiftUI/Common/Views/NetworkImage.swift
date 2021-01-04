@@ -10,6 +10,7 @@ import SwiftUI
 struct NetworkImage: View {
     var url: String
     var imageSize = CGSize(width: 35, height: 35)
+    var cornerRadius = CGFloat(0.0)
     @State private var image: UIImage?
     var body: some View {
 //        Image(uiImage: image ?? UIImage(systemName: "star")!)
@@ -27,15 +28,19 @@ struct NetworkImage: View {
                     .frame(width:imageSize.width,height: imageSize.height)
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
+                    .cornerRadius(cornerRadius)
             } else {
                 ProgressView()
+                    .onAppear (
+                        perform: loadImage
+                    )
             }
-        }.onAppear (
-            perform: loadImage
-        )
+        }
     }
     
     func loadImage() {
+        if self.image != nil { return }
+        
         let imageURL = URL(string: self.url)
         if let Url = imageURL {
             URLSession.shared.dataTask(with: Url) {(imageData, response, error) in

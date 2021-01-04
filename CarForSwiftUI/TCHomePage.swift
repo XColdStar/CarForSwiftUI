@@ -16,6 +16,8 @@ class TCHomePageDatasModel: ObservableObject {
     @Published var carBrandDatas = [TCHomePageListChildren]()
     //车型推荐
     @Published var carTypeRecommendDatas = [TCHomePageListChildren]()
+    //精选好车
+    @Published var selectGoodCarDatas = [TCSelectGoodCarModel]()
 }
 
 struct TCHomePage: View {
@@ -24,6 +26,8 @@ struct TCHomePage: View {
         UITableView.appearance().separatorStyle = UITableViewCell.SeparatorStyle.none
         UITableView.appearance().backgroundColor = UIColor.clear
         UITableViewCell.appearance().selectionStyle = .none
+        getConfigDatas()
+        getSelectGoodCarListData()
     }
 
     //存放首页所有数据模型
@@ -117,15 +121,16 @@ struct TCHomePage: View {
                         .listRowBackground(GrayColor_Back)
                         .listRowInsets(EdgeInsets(.init(top: 0, leading: 0, bottom: -8, trailing: 0)))
                         
-                        ForEach(0..<15) { idx in
+                        ForEach(self.datas.selectGoodCarDatas) { item in
+                            let idx = self.datas.selectGoodCarDatas.firstIndex(of: item)
                             if idx == 0 || idx == 14 {
-                                TCCarCell()
+                                TCCarCell(model: item)
                                     .background(
                                         RoundedRectangle(cornerRadius: 88, style: .circular)
                                             .fill(Color.white)
                                     )
                             } else {
-                                TCCarCell()
+                                TCCarCell(model: item)
                             }
                         }
                         .listRowBackground(GrayColor_Back)
@@ -149,23 +154,19 @@ struct TCHomePage: View {
                         )
                         .listRowBackground(GrayColor_Back)
                         .listRowInsets(.init(top: -8, leading: 10, bottom: 0, trailing: 10))
-                        
                     }
                     .listStyle(PlainListStyle())
-                    
                 }
                 .frame(width: DeviceWidth, alignment: .top)
                 .background(GrayColor_Back)
                 .navigationBarHidden(true)
-                .onAppear (
-                    perform: getConfigDatas
-                )
             }
         } else {
             // Fallback on earlier versions
         }
     }
     
+    //获取首页列表header相关数据
     func getConfigDatas() {
         TCHomePageRequest.getConfigDatas {(isSuccess, array, error) in
             if isSuccess {
@@ -195,6 +196,21 @@ struct TCHomePage: View {
         }
     }
     
+    //获取精选好车列表数据
+    func getSelectGoodCarListData() {
+        let param: [String : Any] = ["cityid":201,"sign":"9a1bc497ebb9c9d95cb7710e1fbe3a3d"]
+        TCHomePageRequest.getSelectGoodCars(param: param) { (isSuccess, array, error) in
+            if isSuccess {
+                if let datas = array {
+                    self.datas.selectGoodCarDatas = datas
+                } else {
+                    print("空数据~")
+                }
+            } else {
+                print("请求失败~：\(String(describing: error))")
+            }
+        }
+    }
 }
 
 struct TCHomePage_Previews: PreviewProvider {

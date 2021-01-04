@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-let host = "https://bj.app.yiche.com/"
-
 let DeviceWidth = UIScreen.main.bounds.size.width
 
 let DeviceHeight = UIScreen.main.bounds.size.height

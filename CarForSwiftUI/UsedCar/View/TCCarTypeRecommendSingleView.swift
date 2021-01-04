@@ -11,7 +11,7 @@ struct TCCarTypeRecommendSingleView: View {
     var model: TCHomePageListChildren
     var body: some View {
         ZStack() {
-            NetworkImage(url: model.image ?? "",imageSize: CGSize(width:(DeviceWidth-40)/3.0,height: 88))
+            NetworkImage(url: model.image ?? "", imageSize: CGSize(width:(DeviceWidth-40)/3.0,height: 88))
                 .frame(width:(DeviceWidth-40)/3.0,height: 88)
                 .aspectRatio(contentMode: .fit)
                 .scaledToFill()
