@@ -25,24 +25,27 @@ struct TCCarCell: View {
 //                            .fill(Color.white)
 //                    )
                 
-                NetworkImage(url: model.image ?? "", imageSize: CGSize(width: DeviceWidth/3.0, height: 90), cornerRadius: 8)
-                    .frame(width: DeviceWidth/3.0, height: 90, alignment: .center)
+                NetworkImage(url: model.image ?? "", imageSize: CGSize(width: 114, height: 76), cornerRadius: 8)
+                    .frame(width: 114, height: 76, alignment: .center)
+                
+                Spacer()
+                    .frame(width:15)
                 
                 VStack(alignment:.leading) {
                     
                     if let year = model.year {
                         Text((model.serialName ?? "") + "\(year)款" + (model.carName ?? ""))
-                            .font(.headline)
+                            .font(.subheadline)
                     } else {
                         Text((model.serialName ?? "") + (model.carName ?? ""))
-                            .font(.headline)
+                            .font(.subheadline)
                     }
 
                     if (model.labels?.count)! > 0 {
                         Spacer()
                             .frame(height:5)
                         Text(model.labels!)
-                            .font(.system(size: 12, weight: .light))
+                            .font(.system(size: 10, weight: .light))
                             .foregroundColor(.blue)
                             .padding(.all,2)
                             .background(
@@ -55,15 +58,18 @@ struct TCCarCell: View {
                         .frame(height:5)
                     
                     if let year = model.year {
-                        Text("\(year)年/\(String(format: "%.2f", model.mileage!/10000.0))万公里/\(model.cityName ?? "")")
-                            .font(.system(size: 12, weight: .light))
+                        Text("\(String(format: "%d", year))年/\(String(format: "%.2f", model.mileage!/10000.0))万公里/\(model.cityName ?? "")")
+                            .font(.system(size: 11, weight: .light))
+                    } else {
+                        Text("\(String(format: "%.2f", model.mileage!/10000.0))万公里/\(model.cityName ?? "")")
+                            .font(.system(size: 11, weight: .light))
                     }
                     
                     Spacer()
                         .frame(height:5)
                     
                     Text(model.displayPrice ?? "")
-                        .font(.system(size: 15, weight: .medium))
+                        .font(.system(size: 13, weight: .medium))
                         .foregroundColor(.red)
                     
                 }

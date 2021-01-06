@@ -37,7 +37,7 @@ struct TCSearchBarView: View {
             
             Spacer()
         }
-        .frame(width:DeviceWidth-20, height: 36)
+        .frame(width:DeviceWidth-20, height: 30)
         .background(
             RoundedRectangle(cornerRadius: 50, style: .circular)
                 .fill(Color.white)

@@ -17,7 +17,7 @@ struct TCHomePageTopView: View {
             ForEach(datas) {data in
                 VStack {
                     
-                    NetworkImage(url: data.image ?? "")
+                    NetworkImage(url: data.image ?? "",imageSize: CGSize(width: 30, height: 30))
                     
                     Spacer()
                         .frame(height:5)

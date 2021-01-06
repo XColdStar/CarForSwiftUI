@@ -19,11 +19,10 @@ struct TCCarBrandView: View {
                         if item == datas.last {
                             Image(systemName: "ellipsis.circle")
                                 .resizable()
-                                .frame(width:30,height:30)
+                                .frame(width:25,height:25)
                                 .foregroundColor(.gray)
                         } else {
-                            NetworkImage(url: item.image ?? "")
-                                .frame(width: 30, height: 30)
+                            NetworkImage(url: item.image ?? "",imageSize: CGSize(width: 30, height: 30))
                         }
                     }
                     Spacer()
