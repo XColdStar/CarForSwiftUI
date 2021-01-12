@@ -25,7 +25,16 @@ struct TCCarCell: View {
 //                            .fill(Color.white)
 //                    )
                 
-                NetworkImage(url: model.image ?? "", imageSize: CGSize(width: 114, height: 76), cornerRadius: 8)
+//                ImageView(imageUrl: model.image ?? "", imageSize: CGSize(width: 114, height: 76))
+//                    .aspectRatio(contentMode: .fill)
+//                    .frame(width: 114, height: 76)
+//                    .clipped()
+//                    .cornerRadius(8)
+
+                NetworkImage(url: model.image ?? "",
+                        placeholder: Image("async105x70"),
+                          imageSize: CGSize(width: 114, height: 76),
+                      cornerRadius: 8)
                     .frame(width: 114, height: 76, alignment: .center)
                 
                 Spacer()

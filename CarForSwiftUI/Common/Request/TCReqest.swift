@@ -9,12 +9,13 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-let host = "https://bj.app.yiche.com/"
+let host = "https://bj.app.yiche.com/usedcar/"
+let host_test = "https://bj.app.yiche.com/test-usedcar/"
 
 struct TCReqest  {
     
     static func request(url: String, method: HTTPMethod, param: [String: Any]?, resultCallback: @escaping (Bool, JSON?, NSError?)->()) {
-        let requestUrl = host + url
+        let requestUrl = host_test + url
         print("requestUrl：\(requestUrl)")
         AF.request(requestUrl, method: method, parameters: param).responseJSON { response in
             

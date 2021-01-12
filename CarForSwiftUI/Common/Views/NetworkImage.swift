@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NetworkImage: View {
     var url: String
+    var placeholder = Image("")
     var imageSize = CGSize(width: 35, height: 35)
     var cornerRadius = CGFloat(0.0)
     @State private var image: UIImage?
@@ -25,12 +26,13 @@ struct NetworkImage: View {
             if let img = image {
                 Image(uiImage: img)
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .frame(width:imageSize.width,height: imageSize.height)
-                    .scaledToFit()
-                    .aspectRatio(contentMode: .fit)
+                    .clipped()
                     .cornerRadius(cornerRadius)
             } else {
-                ProgressView()
+//                ProgressView()
+                placeholder
                     .onAppear (
                         perform: loadImage
                     )
@@ -39,16 +41,22 @@ struct NetworkImage: View {
     }
     
     func loadImage() {
-        if self.image != nil { return }
-        
         let imageURL = URL(string: self.url)
-        if let Url = imageURL {
-            URLSession.shared.dataTask(with: Url) {(imageData, response, error) in
-                if error == nil && imageData != nil {
-                    self.image = UIImage(data: imageData!)
-                }
-            }.resume()
+        guard let Url = imageURL else {
+            return
         }
+        
+        let imageData = URLCache.shared.cachedResponse(for: URLRequest(url: Url))?.data
+        guard imageData == nil else {
+            image = UIImage(data: imageData!)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: Url) {(imageData, response, error) in
+            if error == nil && imageData != nil {
+                image = UIImage(data: imageData!)
+            }
+        }.resume()
     }
 }
 

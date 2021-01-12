@@ -64,7 +64,7 @@ struct TCHomePage: View {
                                     .frame(height:10)
                                 HStack {
                                     Spacer()
-                                        .frame(width:10)
+                                        .frame(width:15)
                                     TCLookedView()
                                     Spacer()
                                         .frame(width:10)
@@ -119,7 +119,7 @@ struct TCHomePage: View {
                             )
                         }
                         .listRowBackground(GrayColor_Back)
-                        .listRowInsets(EdgeInsets(.init(top: 0, leading: 0, bottom: -8, trailing: 0)))
+                        .listRowInsets(EdgeInsets(.init(top: 0, leading: 10, bottom: -8, trailing: 0)))
                         
                         ForEach(self.datas.selectGoodCarDatas) { item in
                             let idx = self.datas.selectGoodCarDatas.firstIndex(of: item)
