@@ -31,7 +31,7 @@ struct CarForSwiftUIApp: App {
                         Text("测试")
                     }.tag(1)
             }
-            .accentColor(.yellow)
+//            .accentColor(.blue)
         }
     }
 }
