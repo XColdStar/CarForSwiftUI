@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TCCarTypeView: View {
-    @Binding var datas: [TCHomePageListChildren]
+    var datas: [TCHomePageListChildren]
     @EnvironmentObject var lookedManager: TCLookedManager
     var body: some View {
         let columns: [GridItem] = Array(repeating: .init(.fixed((DeviceWidth-70)/4.0)), count: 4)
@@ -36,6 +36,6 @@ struct TCCarTypeView: View {
 struct TCCarTypeView_Previews: PreviewProvider {
     @State static private var datas = [TCHomePageListChildren(data: nil, image: "", subTitle: "subtitle", title: "title")]
     static var previews: some View {
-        TCCarTypeView(datas: $datas)
+        TCCarTypeView(datas: datas)
     }
 }

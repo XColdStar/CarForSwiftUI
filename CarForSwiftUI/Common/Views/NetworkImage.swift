@@ -40,8 +40,8 @@ struct NetworkImage: View {
         }
     }
     
-    func loadImage() {
-        let imageURL = URL(string: self.url)
+      func loadImage() {
+        let imageURL = URL(string: url)
         guard let Url = imageURL else {
             return
         }

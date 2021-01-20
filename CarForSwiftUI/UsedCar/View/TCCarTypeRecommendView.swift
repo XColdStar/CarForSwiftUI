@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TCCarTypeRecommendView: View {
-    @Binding var datas: [TCHomePageListChildren]
+    var datas: [TCHomePageListChildren]
     var body: some View {
         HStack {
             ForEach(datas) { item in

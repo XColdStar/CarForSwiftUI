@@ -31,8 +31,8 @@ struct TCHomePage: View {
     }
 
     //存放首页所有数据模型
-    @ObservedObject var datas = TCHomePageDatasModel()
-
+    @ObservedObject var model = TCHomePageDatasModel()
+    
     //最近看过数据源
     @EnvironmentObject var lookedManager: TCLookedManager
     
@@ -51,13 +51,10 @@ struct TCHomePage: View {
                     }
 
                     List {
-                        
                         //header
                         VStack(alignment: .center) {
-                            
                             //糖豆
-                            TCHomePageTopView(datas: $datas.topDatas)
-
+                            TCHomePageTopView(datas: model.topDatas)
                             //最近看过
                             if lookedManager.lookedModels.count > 0 {
                                 Spacer()
@@ -77,10 +74,10 @@ struct TCHomePage: View {
                             VStack {
                                 Spacer()
                                     .frame(height:15)
-                                TCCarTypeView(datas: $datas.carTypeDatas)//车型（5万以下...SUV...）
+                                TCCarTypeView(datas: model.carTypeDatas)//车型（5万以下...SUV...）
                                 Spacer()
                                     .frame(height:10)
-                                TCCarBrandView(datas: $datas.carBrandDatas)//品牌（大众...）
+                                TCCarBrandView(datas: model.carBrandDatas)//品牌（大众...）
                                 Spacer()
                                     .frame(height:15)
                             }
@@ -93,7 +90,7 @@ struct TCHomePage: View {
                             //车型推荐（城市代步）
                             Spacer()
                                 .frame(height:10)
-                            TCCarTypeRecommendView(datas: $datas.carTypeRecommendDatas)
+                            TCCarTypeRecommendView(datas: model.carTypeRecommendDatas)
                             Spacer()
                                 .frame(height:10)
                             
@@ -121,8 +118,9 @@ struct TCHomePage: View {
                         .listRowBackground(GrayColor_Back)
                         .listRowInsets(EdgeInsets(.init(top: 0, leading: 0, bottom: -8, trailing: 0)))
                         
-                        ForEach(self.datas.selectGoodCarDatas) { item in
-                            let idx = self.datas.selectGoodCarDatas.firstIndex(of: item)
+                        //cell
+                        ForEach(model.selectGoodCarDatas) { item in
+                            let idx = model.selectGoodCarDatas.firstIndex(of: item)
                             if idx == 0 || idx == 14 {
                                 TCCarCell(model: item)
                                     .background(
@@ -173,17 +171,17 @@ struct TCHomePage: View {
                 if let datas = array {
                     for (_, item) in datas.enumerated() {
                         switch item.typeId {
-                        case "1": self.datas.topDatas = item.list ?? []
-                        case "2": self.datas.carTypeDatas = item.list ?? []
-                        case "3": self.datas.carTypeDatas += item.list ?? []
+                        case "1": model.topDatas = item.list ?? []
+                        case "2": model.carTypeDatas = item.list ?? []
+                        case "3": model.carTypeDatas += item.list ?? []
                         case "4": do {
-                            self.datas.carBrandDatas = item.list ?? []
-                            if self.datas.carBrandDatas.count > 0 {
+                            model.carBrandDatas = item.list ?? []
+                            if model.carBrandDatas.count > 0 {
                                 let more = TCHomePageListChildren(data: "0", image: "ellipsis.circle.fill", subTitle: "", title: "更多")
-                                self.datas.carBrandDatas.append(more)
+                                model.carBrandDatas.append(more)
                             }
                         }
-                        case "5":self.datas.carTypeRecommendDatas = item.list ?? []
+                        case "5": model.carTypeRecommendDatas = item.list ?? []
                         default: break
                         }
                     }
@@ -202,7 +200,7 @@ struct TCHomePage: View {
         TCHomePageRequest.getSelectGoodCars(param: param) { (isSuccess, array, error) in
             if isSuccess {
                 if let datas = array {
-                    self.datas.selectGoodCarDatas = datas
+                    model.selectGoodCarDatas = datas
                 } else {
                     print("空数据~")
                 }

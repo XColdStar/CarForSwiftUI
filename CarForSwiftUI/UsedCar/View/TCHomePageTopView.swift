@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct TCHomePageTopView: View {
-    
-    @Binding var datas: [TCHomePageListChildren]
-    
+    let datas: [TCHomePageListChildren]
     var body: some View {
         let rows: [GridItem] = Array(repeating: GridItem(), count: 1)
         LazyHGrid(rows: rows, alignment: .center) {
@@ -36,6 +34,7 @@ struct TCHomePageTopView: View {
 //        .shadow(radius: 5)
     }
 }
+
 
 //struct TCHomePageTopView_Previews: PreviewProvider {
 //    @State static private var datas = [TCHomePageListChildren(data: nil, image: "", subTitle: "subtitle", title: "title")]

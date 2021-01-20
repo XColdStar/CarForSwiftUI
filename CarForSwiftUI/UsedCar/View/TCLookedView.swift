@@ -30,11 +30,9 @@ struct TCLookedView: View {
                     }
                 }
             }
-            HStack {
-                RoundedRectangle(cornerRadius: 0)
-                    .fill(LinearGradient(gradient: Gradient(colors: [Color(hex: 0xFFFFFF, alpha: 0.5),Color(hex: 0xFFFFFF, alpha: 0.7),Color(hex: 0xF5F7FB, alpha: 0.9)]), startPoint: .leading, endPoint: .trailing))
-                    .frame(width: 10, height: 25, alignment: .trailing)
-            }
+            RoundedRectangle(cornerRadius: 0)
+                .fill(LinearGradient(gradient: Gradient(colors: [Color(hex: 0xFFFFFF, alpha: 0.5),Color(hex: 0xFFFFFF, alpha: 0.7),Color(hex: 0xF5F7FB, alpha: 0.9)]), startPoint: .leading, endPoint: .trailing))
+                .frame(width: 10, height: 25, alignment: .trailing)
         }
 //        .background(Color.gray)
     }

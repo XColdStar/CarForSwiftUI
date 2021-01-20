@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TCCarBrandView: View {
-    @Binding var datas: [TCHomePageListChildren]
+    var datas: [TCHomePageListChildren]
     var body: some View {
         let width = (DeviceWidth-20)/6.0
         let columns: [GridItem] = Array(repeating: .init(.fixed(width)), count: 5)
